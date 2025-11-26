@@ -1,5 +1,5 @@
 # Exam Results Portal 2025
-## Khabbab Bin Aratti Institute for Islamic Studies & Cultural
+## Machad Khabab
 
 ### Setup Instructions
 
@@ -12,7 +12,17 @@ npm install
    - Place your logo image at: `public/assets/logo.jpg`
    - The logo will appear in the header of all pages
 
-3. **Start Server:**
+3. **Configure Environment:**
+   - Defaults to SQLite (`DB_CLIENT=sqlite`). For Postgres set:
+     ```
+     DB_CLIENT=postgres
+     DATABASE_URL=postgres://user:pass@host:5432/dbname
+     ```
+   - Optional:
+     - `IMGBB_API_KEY` for cloud photo storage
+     - `DEFAULT_PHOTO_URL` override
+
+4. **Start Server:**
 ```bash
 npm start
 ```
@@ -22,7 +32,7 @@ For development with auto-reload:
 npm run dev
 ```
 
-4. **Access the Website:**
+5. **Access the Website:**
    - Main page: http://localhost:5000
    - Admin login: Click "Admin Login" link
    - Default admin credentials:
@@ -58,7 +68,7 @@ npm run dev
 
 ### Technology Stack
 
-- **Backend:** Node.js + Express + SQLite
+- **Backend:** Node.js + Express + SQLite (default) / PostgreSQL
 - **Frontend:** React + TailwindCSS
 - **QR Codes:** qrcode npm package
 - **PDF Generation:** jsPDF
