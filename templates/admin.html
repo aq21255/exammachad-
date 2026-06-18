@@ -853,9 +853,12 @@
             );
         }
 
-        ReactDOM.render(<AdminDashboard />, document.getElementById('root'));
-    </script>
-    {% endraw %}
+               );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<AdminDashboard />);
+</script>
+{% endraw %}
 </body>
 </html>
-
